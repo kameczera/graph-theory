@@ -1,0 +1,58 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compilar_Graph",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-c",
+                "Graph/Graph.cpp",
+                "-o",
+                "Graph.o"
+            ]
+        },
+        {
+            "label": "compilar_main",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-c",
+                "main.cpp",
+                "-o",
+                "main.o"
+            ]
+        },
+        {
+            "label": "vincular",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "Graph.o",
+                "main.o",
+                "-o",
+                "cycle_finder"
+            ]
+        },
+        {
+            "label": "executar_programa",
+            "type": "shell",
+            "command": "./cycle_finder"
+        },
+        {
+            "label": "executar_todas",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "compilar_Graph",
+                "compilar_main",
+                "vincular",
+                "executar_programa"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
