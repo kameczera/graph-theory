@@ -1,2 +1,2 @@
-Learning graph beyond theory.\n
+Learning graph beyond theory.<br>
 Coding some famous algorithm in graphs theory
